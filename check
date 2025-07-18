@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Зачекайте...</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 50px; background: #0d0d0d; color: #fff; }
+        .timer { font-size: 48px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h2>⏳ Зачекайте, йде обробка...</h2>
+    <div class="timer" id="timer">5</div>
+
+    <script>
+        let t = 5;
+        setInterval(() => {
+            t--;
+            document.getElementById('timer').innerText = t > 0 ? t : 'Готово!';
+        }, 1000);
+    </script>
+</body>
+</html>
